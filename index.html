@@ -31,20 +31,22 @@
                 <div class="col-md-2">
                     <a href="#" class="heima_app">
                         <span class="heima_icon heima_icon_phone"></span>
-                        <span>二维码</span>
+                        <span>商务合作</span>
                         <span class="glyphicon glyphicon-menu-down"></span>
                         <img src="images/code.jpg" alt="" />
                     </a>
                 </div>
 
+                <div class="col-md-5">
+                    <a href="#">热门电影推荐</a>
+                </div>
+
                 <div class="col-md-2">
-                    <a href="#">A</a>
+                    <input type="text" class="form-control" id="username" placeholder="用户名验证" />
                 </div>
                 <div class="col-md-2">
-                    <a href="#">B</a>
-                </div>
-                <div class="col-md-2">
-                    <a href="#">C</a>
+                    <button class="btn btn-default" id="set_btn" onclick="set_username()">设置</button>
+                    <button class="btn btn-default" id="check_btn" onclick="check_username()">验证</button>
                 </div>
 
             </div>
@@ -467,6 +469,8 @@
     <!--自己的js-->
     <script src="js/swipe.js"></script>
     <script src="js/index.js"></script>
+
+    <script src="js/localStorage.js"></script>
 </body>
 
 </html>
