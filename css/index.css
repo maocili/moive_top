@@ -455,17 +455,57 @@ fieldset[disabled] .heima_nav .btn-link:focus {
 
 /*产品盒子*/
 
-.product_box {
-    height: 150px;
-    width: 100%;
-    display: block;
-    background: #fff;
-    box-shadow: 2px 2px 3px 1px #d8d8d8;
-    margin-top: 20px;
-    font-size: 12px;
-    color: #666;
+.produce-pane {
+    display: flex;
+    max-width: 1076px;
+    transform: translateX(-134px);
 }
 
+.product-pane-flex {
+    flex-shrink: 0;
+    height: 162px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.4s;
+    width: 134px
+}
+
+.product_box {
+    height: 150px;
+    width: 120px;
+    border: 1px solid #dfe1e5;
+    border-radius: 8px;
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 162px;
+    margin-right: 12px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.4s;
+}
+
+.product_box:hover {
+    width: 250px;
+}
+
+.product_box>.product_img_small {
+    transition-property: width;
+    transition-duration: 0.4s;
+    display: block;
+}
+
+.product_box>.product_img_small:hover {
+    width: 250px;
+}
+
+.product_box>.product_img_width {
+    transition-property: width;
+    transition-duration: 0.4s;
+    display: none;
+}
+
+
+/*  
 .product_box p {
     margin-bottom: 0;
 }
@@ -558,7 +598,7 @@ fieldset[disabled] .heima_nav .btn-link:focus {
 
 .product_box_right p:first-of-type sub {
     bottom: 0;
-}
+} */
 
 
 /*工具提示*/

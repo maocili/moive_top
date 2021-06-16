@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/index.css" />
 
 
+
 </head>
 
 <body>
@@ -57,11 +58,11 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
                 <a class="navbar-brand" href="#">
                     <img src="images/logo.gif">
                 </a>
@@ -200,142 +201,72 @@
     <div class="heima_product">
         <div class="container">
             <!-- Nav tabs -->
-            <!-- :TODO 视口配置 -->
             <div class="nav-tabs-product-parent">
-                <ul class="nav nav-tabs-product" role="tablist">
-                    <li role="presentation" class="active"><a href="#product_tab_01" aria-controls="home" role="tab" data-toggle="tab">TODO主要产品</a></li>
-                    <li role="presentation"><a href="#product_tab_02" aria-controls="profile" role="tab" data-toggle="tab">TODO宣传片</a></li>
-                    <li role="presentation"><a href="#product_tab_03" aria-controls="messages" role="tab" data-toggle="tab">TODO地理位置</a></li>
-                    <li role="presentation"><a href="#product_tab_04" aria-controls="settings" role="tab" data-toggle="tab">TODO上传图片预览</a></li>
-
+                <ul class="nav nav-tabs-product" role="tablist" style="display: inline-block;">
+                    <li role="presentation" class="active"><a href="#product_tab_01" aria-controls="home" role="tab" data-toggle="tab">特别推荐</a></li>
+                    <li role="presentation"><a href="#product_tab_02" aria-controls="profile" role="tab" data-toggle="tab">视频宣传</a></li>
+                    <li role="presentation"><a href="#product_tab_03" aria-controls="messages" role="tab" data-toggle="tab">地理位置</a></li>
+                    <li role="presentation"><a href="#product_tab_04" aria-controls="settings" role="tab" data-toggle="tab">身份验证</a></li>
                 </ul>
             </div>
             <!-- Tab panes -->
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="product_tab_01">
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <a href="#" class="product_box active">
-                            <div class="product_box_right">
-                                <p><b>8</b><sub>%</sub></p>
-                                <p>年利率</p>
-                            </div>
-                            <div class="product_box_left">
-                                <h3 class="text-center">产品1</h3>
-                                <div class="col-xs-6 text-left">
-                                    <p>起投金额(元)</p>
-                                    <p>0.01万</p>
-                                </div>
-                                <div class="col-xs-6 text-right">
-                                    <p>已投标人数</p>
-                                    <p>22</p>
-                                </div>
-                                <div class="col-xs-6 text-left">
-                                    <p>借款期限</p>
-                                    <p>10天</p>
-                                </div>
-                                <div class="col-xs-6 text-right">
-                                    <p>已投标总金额(元)</p>
-                                    <p>2000</p>
-                                </div>
-                            </div>
-                        </a>
+
+                    <div class="produce-pane">
+                        <div class="product-pane-flex"></div>
+
+                        <div class="product_box" onmouseenter="produce_img_over(this)" onmouseleave="produce_img_out(this)">
+                            <img class="product_img_small" src="images/produce_box/produce_img_1.jpg" width="100%" height="100%">
+                            <img class="product_img_width" src="images/produce_box/produce_img_1_wd.jpg" width="100%" height="100%">
+                        </div>
+
+                        <div class="product_box" onmouseenter="produce_img_over(this)" onmouseleave="produce_img_out(this)">
+                            <img class="product_img_small" src="images/produce_box/produce_img_2.jpg" width="100%" height="100%">
+                            <img class="product_img_width" src="images/produce_box/produce_img_2_wd.jpg" width="100%" height="100%">
+
+                        </div>
+
+                        <div class="product_box" onmouseenter="produce_img_over(this)" onmouseleave="produce_img_out(this)">
+                            <img class="product_img_small" src="images/produce_box/produce_img_3.jfif" width="100%" height="100%">
+                            <img class="product_img_width" src="images/produce_box/produce_img_3_wd.jfif" width="100%" height="100%">
+
+                        </div>
+
+                        <div class="product_box" onmouseenter="produce_img_over(this)" onmouseleave="produce_img_out(this)">
+                            <img class="product_img_small" src="images/produce_box/produce_img_4.jfif" width="100%" height="100%">
+                            <img class="product_img_width" src="images/produce_box/produce_img_4_wd.jfif" width="100%" height="100%">
+
+                        </div>
+
+                        <div class="product_box" onmouseenter="produce_img_over(this)" onmouseleave="produce_img_out(this)">
+                            <img class="product_img_small" src="images/produce_box/produce_img_5.jfif" width="100%" height="100%">
+                            <img class="product_img_width" src="images/produce_box/produce_img_5_wd.jfif" width="100%" height="100%">
+
+                        </div>
+                        <div class="product_box" onmouseenter="produce_img_over(this)" onmouseleave="produce_img_out(this)">
+                            <img class="product_img_small" src="images/produce_box/produce_img_6.jfif" width="100%" height="100%">
+                            <img class="product_img_width" src="images/produce_box/produce_img_6_wd.jfif" width="100%" height="100%">
+
+                        </div>
+
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <a href="#" class="product_box">
-                            <div class="product_box_right">
-                                <div class="toolTip_box">
-                                    <span class="bao" data-toggle="tooltip" data-palcement="top" title="微金宝">宝</span>
-                                    <span class="bei" data-toggle="tooltip" data-palcement="top" title="北京市">北</span>
-                                </div>
-                                <p><b>8</b><sub>%</sub></p>
-                                <p>年利率</p>
-                            </div>
-                            <div class="product_box_left">
-                                <h3 class="text-center">产品2</h3>
-                                <div class="col-xs-6 text-left">
-                                    <p>起投金额(元)</p>
-                                    <p>0.01万</p>
-                                </div>
-                                <div class="col-xs-6 text-right">
-                                    <p>已投标人数</p>
-                                    <p>22</p>
-                                </div>
-                                <div class="col-xs-6 text-left">
-                                    <p>借款期限</p>
-                                    <p>10天</p>
-                                </div>
-                                <div class="col-xs-6 text-right">
-                                    <p>已投标总金额(元)</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                                            <span class="sr-only">60% Complete</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <a href="#" class="product_box">
-                            <div class="product_box_right">
-                                <p><b>8</b><sub>%</sub></p>
-                                <p>年利率</p>
-                            </div>
-                            <div class="product_box_left">
-                                <h3 class="text-center">产品3</h3>
-                                <div class="col-xs-6 text-left">
-                                    <p>起投金额(元)</p>
-                                    <p>0.01万</p>
-                                </div>
-                                <div class="col-xs-6 text-right">
-                                    <p>已投标人数</p>
-                                    <p>22</p>
-                                </div>
-                                <div class="col-xs-6 text-left">
-                                    <p>借款期限</p>
-                                    <p>10天</p>
-                                </div>
-                                <div class="col-xs-6 text-right">
-                                    <p>已投标总金额(元)</p>
-                                    <p>2000</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <a href="#" class="product_box">
-                            <div class="product_box_right">
-                                <p><b>8</b><sub>%</sub></p>
-                                <p>年利率</p>
-                            </div>
-                            <div class="product_box_left">
-                                <h3 class="text-center">产品4</h3>
-                                <div class="col-xs-6 text-left">
-                                    <p>起投金额(元)</p>
-                                    <p>0.01万</p>
-                                </div>
-                                <div class="col-xs-6 text-right">
-                                    <p>已投标人数</p>
-                                    <p>22</p>
-                                </div>
-                                <div class="col-xs-6 text-left">
-                                    <p>借款期限</p>
-                                    <p>10天</p>
-                                </div>
-                                <div class="col-xs-6 text-right">
-                                    <p>已投标总金额(元)</p>
-                                    <p>2000</p>
-                                </div>
-                            </div>
-                        </a>
+
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="product_tab_02">
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="product_tab_03" style="width: 100%;height: 100%; overflow: hidden;">
+
+                </div>
+
+
+                <div role="tabpanel" class="tab-pane" id="product_tab_04">
+                    <div id="dropzone" class="dropzone">
+                        客户身份验证，请将身份证照片拖拽到此处
                     </div>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="product_tab_02"></div>
-                <div role="tabpanel" class="tab-pane" id="product_tab_03"></div>
-                <div role="tabpanel" class="tab-pane" id="product_tab_04"></div>
-                <div role="tabpanel" class="tab-pane" id="product_tab_05"></div>
-                <div role="tabpanel" class="tab-pane" id="product_tab_06"></div>
-                <div role="tabpanel" class="tab-pane" id="product_tab_07"></div>
             </div>
         </div>
     </div>
@@ -351,7 +282,8 @@
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs-news" role="tablist">
                         <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><span class="heima_icon heima_icon_new01"></span></a></li>
-                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><span class="heima_icon heima_icon_new02"></span></a></li>
+                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><span
+                  class="heima_icon heima_icon_new02"></span></a></li>
 
                     </ul>
                 </div>
@@ -474,6 +406,8 @@
     <script src="js/index.js"></script>
 
     <script src="js/localStorage.js"></script>
+
+    <script src="js/produce_box.js"></script>
 </body>
 
 </html>
