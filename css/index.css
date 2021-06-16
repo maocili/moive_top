@@ -15,6 +15,7 @@ a:hover {
     text-decoration: none;
 }
 
+
 /*定义自定义的字体*/
 
 @font-face {
@@ -22,6 +23,7 @@ a:hover {
     /*指定字体的名称*/
     src: url('../fonts/MiFie-Web-Font.eot') format('embedded-opentype'), url('../fonts/MiFie-Web-Font.svg') format('svg'), url('../fonts/MiFie-Web-Font.ttf') format('truetype'), url('../fonts/MiFie-Web-Font.woff') format('woff');
 }
+
 
 /*应用自定义字体*/
 
@@ -36,6 +38,7 @@ a:hover {
 .heima_icon_tel::before {
     content: "\e909";
 }
+
 
 /*顶部通栏*/
 
@@ -55,6 +58,7 @@ a:hover {
     color: #666;
 }
 
+
 /* + ~*/
 
 .heima_topBar>.container>.row>div {
@@ -66,6 +70,7 @@ a:hover {
 .heima_topBar>.container>.row>div+div {
     border-left: 1px solid #ccc;
 }
+
 
 /*二维码的位置及显示、隐藏*/
 
@@ -88,6 +93,7 @@ a:hover {
     margin-left: -60px;
 }
 
+
 /*注册按钮*/
 
 .heima_topBar .btn-register {
@@ -101,64 +107,54 @@ a:hover {
     border-color: #E92322;
 }
 
+
 /*登录按钮*/
 
 .heima_topBar .btn-login:hover {
     text-decoration: none;
 }
 
+
 /*导航栏*/
 
-/*设置整个导航栏的背景色、下边框等*/
-
-.heima_nav {
-    background-color: #fff;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 0;
-}
-
-.heima_nav .navbar-brand {
-    color: #777;
-    height: 80px;
-    line-height: 50px;
-}
-
-.heima_nav .navbar-brand:hover, .heima_nav .navbar-brand:focus {
-    color: #5e5e5e;
-    background-color: transparent;
-}
-
-.heima_nav .navbar-text {
-    color: #777;
-}
 
 /*设置导航栏每个菜单的样式*/
 
 .heima_nav .navbar-nav>li>a {
     color: #777;
     height: 80px;
+    width: 100px;
+    text-align: center;
     line-height: 50px;
+    tranform: translateZ(0);
+    transition-duration: .3s;
+    transition-property: transform;
 }
 
-.heima_nav .navbar-nav>li>a:hover, .heima_nav .navbar-nav>li>a:focus {
+.heima_nav .navbar-nav>li>a:hover,
+.heima_nav .navbar-nav>li>a:focus {
     color: #333;
-    background-color: transparent;
-    border-bottom: 3px solid #E92322;
+    background-color: #ebe9e9;
+    border-bottom: 3px solid #ff810c;
+    transform: translateY(+10px);
 }
+
 
 /*设置活动菜单和非活动菜单的样式*/
 
-.heima_nav .navbar-nav>.active>a, .heima_nav .navbar-nav>.active>a:hover, .heima_nav .navbar-nav>.active>a:focus {
+.heima_nav .navbar-nav>.active>a,
+.heima_nav .navbar-nav>.active>a:hover,
+.heima_nav .navbar-nav>.active>a:focus {
     color: #555;
-    background-color: #fff;
-    border-bottom: 3px solid #E92322;
 }
 
-.heima_nav .navbar-nav>.disabled>a, .heima_nav .navbar-nav>.disabled>a:hover, .heima_nav .navbar-nav>.disabled>a:focus {
+.heima_nav .navbar-nav>.disabled>a,
+.heima_nav .navbar-nav>.disabled>a:hover,
+.heima_nav .navbar-nav>.disabled>a:focus {
     color: #ccc;
     background-color: transparent;
 }
+
 
 /*设置汉堡按钮的样式*/
 
@@ -168,7 +164,8 @@ a:hover {
     margin-bottom: 23px;
 }
 
-.heima_nav .navbar-toggle:hover, .heima_nav .navbar-toggle:focus {
+.heima_nav .navbar-toggle:hover,
+.heima_nav .navbar-toggle:focus {
     background-color: #ddd;
 }
 
@@ -176,30 +173,42 @@ a:hover {
     background-color: #888;
 }
 
-.heima_nav .navbar-collapse, .heima_nav .navbar-form {
+.heima_nav .navbar-collapse,
+.heima_nav .navbar-form {
     border-color: #e7e7e7;
 }
 
-.heima_nav .navbar-nav>.open>a, .heima_nav .navbar-nav>.open>a:hover, .heima_nav .navbar-nav>.open>a:focus {
+.heima_nav .navbar-nav>.open>a,
+.heima_nav .navbar-nav>.open>a:hover,
+.heima_nav .navbar-nav>.open>a:focus {
     color: #555;
     background-color: #e7e7e7;
 }
 
+
 /*当屏幕小于等于767px菜单的样式*/
 
 @media (max-width: 767px) {
+    .heima_nav .navbar-nav>li>a {
+        width: 100%;
+    }
     .heima_nav .navbar-nav .open .dropdown-menu>li>a {
         color: #777;
     }
-    .heima_nav .navbar-nav .open .dropdown-menu>li>a:hover, .heima_nav .navbar-nav .open .dropdown-menu>li>a:focus {
+    .heima_nav .navbar-nav .open .dropdown-menu>li>a:hover,
+    .heima_nav .navbar-nav .open .dropdown-menu>li>a:focus {
         color: #333;
         background-color: transparent;
     }
-    .heima_nav .navbar-nav .open .dropdown-menu>.active>a, .heima_nav .navbar-nav .open .dropdown-menu>.active>a:hover, .heima_nav .navbar-nav .open .dropdown-menu>.active>a:focus {
+    .heima_nav .navbar-nav .open .dropdown-menu>.active>a,
+    .heima_nav .navbar-nav .open .dropdown-menu>.active>a:hover,
+    .heima_nav .navbar-nav .open .dropdown-menu>.active>a:focus {
         color: #555;
         background-color: #e7e7e7;
     }
-    .heima_nav .navbar-nav .open .dropdown-menu>.disabled>a, .heima_nav .navbar-nav .open .dropdown-menu>.disabled>a:hover, .heima_nav .navbar-nav .open .dropdown-menu>.disabled>a:focus {
+    .heima_nav .navbar-nav .open .dropdown-menu>.disabled>a,
+    .heima_nav .navbar-nav .open .dropdown-menu>.disabled>a:hover,
+    .heima_nav .navbar-nav .open .dropdown-menu>.disabled>a:focus {
         color: #ccc;
         background-color: transparent;
     }
@@ -217,13 +226,18 @@ a:hover {
     color: #777;
 }
 
-.heima_nav .btn-link:hover, .heima_nav .btn-link:focus {
+.heima_nav .btn-link:hover,
+.heima_nav .btn-link:focus {
     color: #333;
 }
 
-.heima_nav .btn-link[disabled]:hover, fieldset[disabled] .heima_nav .btn-link:hover, .heima_nav .btn-link[disabled]:focus, fieldset[disabled] .heima_nav .btn-link:focus {
+.heima_nav .btn-link[disabled]:hover,
+fieldset[disabled] .heima_nav .btn-link:hover,
+.heima_nav .btn-link[disabled]:focus,
+fieldset[disabled] .heima_nav .btn-link:focus {
     color: #ccc;
 }
+
 
 /*轮播图*/
 
@@ -245,6 +259,7 @@ a:hover {
     width: 100%;
     display: block;
 }
+
 
 /*信息*/
 
@@ -269,6 +284,7 @@ a:hover {
     color: rgb(0, 255, 64);
     /*信息模块悬停颜色*/
 }
+
 
 /*字体图标*/
 
@@ -295,6 +311,7 @@ a:hover {
 .heima_icon_E902::before {
     content: "\e902";
 }
+
 
 /*预约*/
 
@@ -326,6 +343,7 @@ a:hover {
     border-bottom: 1px dashed #E92322;
 }
 
+
 /*字体图标*/
 
 .heima_icon_E906::before {
@@ -335,6 +353,7 @@ a:hover {
 .heima_icon_E905::before {
     content: "\e905";
 }
+
 
 /*产品*/
 
@@ -363,7 +382,9 @@ a:hover {
     background: #f5f5f5;
 }
 
-.nav-tabs-product>li.active>a, .nav-tabs-product>li.active>a:hover, .nav-tabs-product>li.active>a:focus {
+.nav-tabs-product>li.active>a,
+.nav-tabs-product>li.active>a:hover,
+.nav-tabs-product>li.active>a:focus {
     color: #555;
     cursor: default;
     border: none;
@@ -405,7 +426,9 @@ a:hover {
     border-radius: 4px;
 }
 
-.nav-tabs-product.nav-justified>.active>a, .nav-tabs-product.nav-justified>.active>a:hover, .nav-tabs-product.nav-justified>.active>a:focus {
+.nav-tabs-product.nav-justified>.active>a,
+.nav-tabs-product.nav-justified>.active>a:hover,
+.nav-tabs-product.nav-justified>.active>a:focus {
     border: 1px solid #ddd;
 }
 
@@ -414,10 +437,13 @@ a:hover {
         border-bottom: 1px solid #ddd;
         border-radius: 4px 4px 0 0;
     }
-    .nav-tabs-product.nav-justified>.active>a, .nav-tabs-product.nav-justified>.active>a:hover, .nav-tabs-product.nav-justified>.active>a:focus {
+    .nav-tabs-product.nav-justified>.active>a,
+    .nav-tabs-product.nav-justified>.active>a:hover,
+    .nav-tabs-product.nav-justified>.active>a:focus {
         border-bottom-color: #fff;
     }
 }
+
 
 /*页签父盒子*/
 
@@ -425,6 +451,7 @@ a:hover {
     width: 100%;
     overflow: hidden;
 }
+
 
 /*产品盒子*/
 
@@ -494,7 +521,8 @@ a:hover {
     border-left: 1px dashed #ccc;
 }
 
-.product_box .product_box_right::before, .product_box .product_box_right::after {
+.product_box .product_box_right::before,
+.product_box .product_box_right::after {
     content: "";
     position: absolute;
     left: -6px;
@@ -532,6 +560,7 @@ a:hover {
     bottom: 0;
 }
 
+
 /*工具提示*/
 
 .toolTip_box {
@@ -559,6 +588,7 @@ a:hover {
     color: red;
     border: 1px solid red;
 }
+
 
 /*新闻*/
 
@@ -596,6 +626,7 @@ a:hover {
     width: 1px;
 }
 
+
 /*新闻  tab*/
 
 .nav-tabs-news {
@@ -620,6 +651,7 @@ a:hover {
     text-align: center;
 }
 
+
 /*针对小屏幕设备*/
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
@@ -627,6 +659,7 @@ a:hover {
         margin: 20px 40px;
     }
 }
+
 
 /*针对超小屏幕设备*/
 
@@ -663,7 +696,9 @@ a:hover {
     background: #E92322;
 }
 
-.nav-tabs-news>li.active>a, .nav-tabs-news>li.active>a:hover, .nav-tabs-news>li.active>a:focus {
+.nav-tabs-news>li.active>a,
+.nav-tabs-news>li.active>a:hover,
+.nav-tabs-news>li.active>a:focus {
     color: #555;
     cursor: default;
     background-color: #E92322;
@@ -705,7 +740,9 @@ a:hover {
     border-radius: 4px;
 }
 
-.nav-tabs-news.nav-justified>.active>a, .nav-tabs-news.nav-justified>.active>a:hover, .nav-tabs-news.nav-justified>.active>a:focus {
+.nav-tabs-news.nav-justified>.active>a,
+.nav-tabs-news.nav-justified>.active>a:hover,
+.nav-tabs-news.nav-justified>.active>a:focus {
     border: 1px solid #ddd;
 }
 
@@ -714,7 +751,9 @@ a:hover {
         border-bottom: 1px solid #ddd;
         border-radius: 4px 4px 0 0;
     }
-    .nav-tabs-news.nav-justified>.active>a, .nav-tabs-news.nav-justified>.active>a:hover, .nav-tabs-news.nav-justified>.active>a:focus {
+    .nav-tabs-news.nav-justified>.active>a,
+    .nav-tabs-news.nav-justified>.active>a:hover,
+    .nav-tabs-news.nav-justified>.active>a:focus {
         border-bottom-color: #fff;
     }
 }
@@ -726,6 +765,7 @@ a:hover {
 .heima_news .tab-pane>ul>li {
     padding: 10px;
 }
+
 
 /*字体图标*/
 
@@ -744,6 +784,7 @@ a:hover {
 .heima_icon_new04::before {
     content: "\e911";
 }
+
 
 /*合作伙伴*/
 
@@ -768,6 +809,7 @@ a:hover {
 .heima_partner ul li:first-child {
     margin-left: 0;
 }
+
 
 /*字体图标*/
 
