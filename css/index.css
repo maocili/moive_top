@@ -242,7 +242,7 @@ fieldset[disabled] .heima_nav .btn-link:focus {
 /*轮播图*/
 
 .pc_imageBox {
-    height: 720px;
+    height: 820px;
     width: 100%;
     display: block;
     background-repeat: no-repeat;
@@ -649,6 +649,9 @@ fieldset[disabled] .heima_nav .btn-link:focus {
     margin-bottom: 60px;
     padding: 0;
     text-align: center;
+    tranform: translateZ(0);
+    transition-duration: .3s;
+    transition-property: transform;
 }
 
 
@@ -694,6 +697,7 @@ fieldset[disabled] .heima_nav .btn-link:focus {
 .nav-tabs-news>li>a:hover {
     border: none;
     background: #E92322;
+    transform: translateY(+10px);
 }
 
 .nav-tabs-news>li.active>a,
