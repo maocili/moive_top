@@ -1,24 +1,24 @@
 /**
  * 轮播图和产品模块JavaScript
  */
-$(function () {
+$(function() {
     banner();
     initProduct();
-    $('[data-toggle="tooltip"]').tooltip();/*需要自己去初始化  工具提示*/
+    $('[data-toggle="tooltip"]').tooltip(); /*需要自己去初始化  工具提示*/
 });
 
 /*动态轮播图*/
 function banner() {
     /*
-    * 获取数据       ajax
-    * 判断当前是什么设备  768px以下都是  移动设备
-    * 根据设备来解析数据  （json转化HTML   字符串拼接  模版引擎 ）
-    * 渲染在html页面当中  html(解析的字符串);
-    * 当页面尺寸改变的时候重新渲染   监听页面尺寸的改变  resize
-    * */
+     * 获取数据       ajax
+     * 判断当前是什么设备  768px以下都是  移动设备
+     * 根据设备来解析数据  （json转化HTML   字符串拼接  模版引擎 ）
+     * 渲染在html页面当中  html(解析的字符串);
+     * 当页面尺寸改变的时候重新渲染   监听页面尺寸的改变  resize
+     * */
     var myData;
     /*获取数据*/
-    var getData = function (callback) {
+    var getData = function(callback) {
         if (myData) {
             callback && callback(myData);
             return false;
@@ -37,13 +37,12 @@ function banner() {
         //     }
         // });
 
-        data = [
-            {
+        data = [{
                 "pc": "images/slide_01_2000x410.jpg",
                 "mb": "images/slide_01_640x340.jpg"
             },
             {
-                "pc": "images/slide_02_2000x410.jpg",
+                "pc": "images/slide_02_2000x410.gif",
                 "mb": "images/slide_02_640x340.jpg"
             },
             {
@@ -60,22 +59,22 @@ function banner() {
 
     };
     /*渲染*/
-    var render = function () {
+    var render = function() {
         /*
-        * 判断当前是什么设备  768px以下都是  移动设备
-        * 根据设备来解析数据  （json转化HTML   字符串拼接  模版引擎 ）
-        * 渲染在html页面当中  html(解析的字符串);
-        * */
-        var width = $(window).width();//获取当前屏幕的宽度
+         * 判断当前是什么设备  960px以下都是  移动设备
+         * 根据设备来解析数据  （json转化HTML   字符串拼接  模版引擎 ）
+         * 渲染在html页面当中  html(解析的字符串);
+         * */
+        var width = $(window).width(); //获取当前屏幕的宽度
 
         /*判断当前是不是移动端*/
         var isMobile = false;
-        if (width <= 768) {//小于等于768px的时候认为是移动设备
+        if (width <= 960) { //小于等于768px的时候认为是移动设备
             isMobile = true;
         }
 
         /*获取数据*/
-        getData(function (data) {
+        getData(function(data) {
             /*根据设备来解析数据 */
 
             var templatePoint = _.template($('#template_point').html());
@@ -91,7 +90,7 @@ function banner() {
 
     };
     /*当页面尺寸改变的时候重新渲染   监听页面尺寸的改变  resize*/
-    $(window).on('resize', function () {
+    $(window).on('resize', function() {
         render();
     }).trigger('resize');
     /*及时执行  resize  事件*/
@@ -101,18 +100,18 @@ function banner() {
     var moveX = 0;
     var distanceX = 0;
     var isMove = false;
-    $('.carousel-inner').on('touchstart', function (e) {
+    $('.carousel-inner').on('touchstart', function(e) {
         /*对象没有直接返回原生的移动端touchEvent对象  originalEvent  返回的是 touchEvent对象  */
         startX = e.originalEvent.touches[0].clientX;
     });
-    $('.carousel-inner').on('touchmove', function (e) {
+    $('.carousel-inner').on('touchmove', function(e) {
         moveX = e.originalEvent.touches[0].clientX;
         distanceX = moveX - startX;
         isMove = true;
     });
-    $('.carousel-inner').on('touchend', function (e) {
+    $('.carousel-inner').on('touchend', function(e) {
         if (Math.abs(distanceX) > 50 && isMove) {
-            if (distanceX > 0) {/*怎么操作轮播图组件*/
+            if (distanceX > 0) { /*怎么操作轮播图组件*/
                 /*上一张*/
                 $('.carousel').carousel('prev');
             } else {
@@ -130,16 +129,16 @@ function banner() {
 /*初始化产品页签*/
 function initProduct() {
     /*
-    * 知道所有li的宽度的和
-    * ul的宽度设置成和所有li的和相一致
-    * 滑动
-    * */
+     * 知道所有li的宽度的和
+     * ul的宽度设置成和所有li的和相一致
+     * 滑动
+     * */
     /*获取页签盒子*/
     var tabs = $('.nav-tabs-product');
     /*所有的li*/
     var lis = tabs.find('li');
     var width = 0;
-    $.each(lis, function (i, item) {
+    $.each(lis, function(i, item) {
         /*width() 获取的是内容的宽度*/
         /*innerWidth() 获取的是 内容 内边距 的宽度*/
         width += $(this).innerWidth();
@@ -154,18 +153,18 @@ itcast.iScroll({
 });
 
 /*初始化产品页签*/
-function initProduct(){
+function initProduct() {
     /*
-    * 知道所有li的宽度的和
-    * ul的宽度设置成和所有li的和相一致
-    * 滑动
-    * */
+     * 知道所有li的宽度的和
+     * ul的宽度设置成和所有li的和相一致
+     * 滑动
+     * */
     /*获取页签盒子*/
     var tabs = $('.nav-tabs-product');
     /*所有的li*/
     var lis = tabs.find('li');
     var width = 0;
-    $.each(lis,function(i,item){
+    $.each(lis, function(i, item) {
         /*width() 获取的是内容的宽度*/
         /*innerWidth() 获取的是 内容 内边距 的宽度*/
         width += $(this).innerWidth();
@@ -174,7 +173,7 @@ function initProduct(){
 }
 /*滑动*/
 itcast.iScroll({
-    swipeDom:document.querySelector('.nav-tabs-product-parent'),
-    swipeType:'x',
-    swipeDistance:1000
+    swipeDom: document.querySelector('.nav-tabs-product-parent'),
+    swipeType: 'x',
+    swipeDistance: 1000
 });

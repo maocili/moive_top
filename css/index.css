@@ -242,7 +242,7 @@ fieldset[disabled] .heima_nav .btn-link:focus {
 /*轮播图*/
 
 .pc_imageBox {
-    height: 410px;
+    height: 720px;
     width: 100%;
     display: block;
     background-repeat: no-repeat;
