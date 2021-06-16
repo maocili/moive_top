@@ -1,19 +1,3 @@
-jQuery(document).ready(function ($) {
-    $(window).scroll(function () {
-        if ($(document).scrollTop() > 150) {
-            // Navigation Bar
-            $('.navbar').removeClass('fadeIn');
-            $('body').addClass('shrink');
-            $('.navbar').addClass('animated fadeInDown');
-        } else {
-            $('.navbar').removeClass('fadeInDown');
-            $('body').removeClass('shrink');
-            $('.navbar').addClass('animated fadeIn');
-        }
-    });
-});
-
-
 /**
  * 轮播图和产品模块JavaScript
  */
@@ -170,7 +154,7 @@ itcast.iScroll({
 });
 
 /*初始化产品页签*/
-function initProduct() {
+function initProduct(){
     /*
     * 知道所有li的宽度的和
     * ul的宽度设置成和所有li的和相一致
@@ -181,7 +165,7 @@ function initProduct() {
     /*所有的li*/
     var lis = tabs.find('li');
     var width = 0;
-    $.each(lis, function (i, item) {
+    $.each(lis,function(i,item){
         /*width() 获取的是内容的宽度*/
         /*innerWidth() 获取的是 内容 内边距 的宽度*/
         width += $(this).innerWidth();
@@ -190,7 +174,7 @@ function initProduct() {
 }
 /*滑动*/
 itcast.iScroll({
-    swipeDom: document.querySelector('.nav-tabs-product-parent'),
-    swipeType: 'x',
-    swipeDistance: 1000
+    swipeDom:document.querySelector('.nav-tabs-product-parent'),
+    swipeType:'x',
+    swipeDistance:1000
 });
