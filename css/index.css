@@ -281,7 +281,7 @@ fieldset[disabled] .heima_nav .btn-link:focus {
 }
 
 .heima_info a:hover {
-    color: rgb(0, 255, 64);
+    color: rgb(255, 145, 0);
     /*信息模块悬停颜色*/
 }
 
@@ -893,11 +893,13 @@ fieldset[disabled] .heima_nav .btn-link:focus {
     content: "\e92d";
 }
 
+
 /* 身份验证 */
-.dropzone{
+
+.dropzone {
     width: 30em;
     height: 15em;
-    border: 2px  dashed #ddd;
+    border: 2px dashed #ddd;
     text-align: center;
     padding-top: 100px;
     color: #999;
