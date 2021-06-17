@@ -333,9 +333,87 @@
 
 
                 <div role="tabpanel" class="tab-pane" id="product_tab_04">
-                    <div id="dropzone" class="dropzone">
-                        客户身份验证，请将身份证照片拖拽到此处
-                    </div>
+                    <div id="dropzone" class="dropzone">拖拽文件到此处</div>
+                    <div id="preview" class="preview"></div>
+
+                    <div id="output" class="output"></div>
+                    <script>
+                        function getFileInfo(file) {
+                            var aMultiples = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB"], sizeinfo;
+                            var info = '文件名：' + file.name;
+
+                            for (var nMultiple = 0, nApprox = file.size; nApprox >= 1; nApprox /= 1024, nMultiple++) {
+                                sizeinfo = nApprox.toFixed(3) + " " + aMultiples[nMultiple] +
+                                    " (" + file.size + "bytes )";
+                            }
+                            info += "; 大小:" + sizeinfo;
+                            info += "; 类型:" + file.type;
+
+                            return info + '<br>';
+                        }
+                        function handleFiles(files) {
+                            var preview = document.getElementById('preview')
+                            for (var i = 0; i < files.length; i++) {
+                                var file = files[i]
+                                var imageType = /image.*/
+                                if (!file.type.match(imageType)) {
+                                    continue
+                                }
+
+                                var img = document.createElement('img')
+                                img.file = file
+                                var reader = new FileReader()
+
+                                reader.onload = (function (aImg) {
+                                    return function (e) {
+                                        aImg.src = e.target.result
+                                        preview.appendChild(aImg)
+                                    }
+                                })(img)
+
+                                reader.onprogress = function (e) {
+                                    console.log('当前已加载：' + (e.loaded / e.total * 100).toFixed(2) + "%");
+                                }
+                                reader.readAsDataURL(file)
+
+                            }
+                        }
+
+
+                        var dropzone = document.getElementById('dropzone')
+                        dropzone.addEventListener('drop', function (e) {
+
+                            console.log(1);
+                            var html = '您一共选择了 ' + e.dataTransfer.files.length + '个文件,文件信息如下:<br>';
+
+                            [].forEach.call(e.dataTransfer.files, function (file) {
+                                html += getFileInfo(file);
+                            })
+                            //添加时间信息 和 姓名学号
+                            html += new Date() + "<br>"
+                            document.getElementById('output').innerHTML = html;
+                            //添加img展示
+                            handleFiles(e.dataTransfer.files)
+
+                            e.preventDefault();
+                            e.stopPropagation();
+
+
+
+                        }, false);
+
+                        dropzone.addEventListener('dragover', function (e) {
+
+                            if (e.preventDefault) {
+                                e.preventDefault();
+                            }
+                            return false;
+
+                        }, false);
+
+
+
+                    </script>
                 </div>
             </div>
         </div>
