@@ -20,6 +20,9 @@
     <![endif]-->
     <link rel="stylesheet" href="css/index.css" />
 
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=4qXTGvclMqTZXkLsU3twnMA7"></script>
+
+
 
 
 </head>
@@ -57,12 +60,13 @@
     <nav class="navbar heima_nav">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand" href="#">
                     <img src="images/logo.gif">
                 </a>
@@ -203,10 +207,14 @@
             <!-- Nav tabs -->
             <div class="nav-tabs-product-parent">
                 <ul class="nav nav-tabs-product" role="tablist" style="display: inline-block;">
-                    <li role="presentation" class="active"><a href="#product_tab_01" aria-controls="home" role="tab" data-toggle="tab">特别推荐</a></li>
-                    <li role="presentation"><a href="#product_tab_02" aria-controls="profile" role="tab" data-toggle="tab">视频宣传</a></li>
-                    <li role="presentation"><a href="#product_tab_03" aria-controls="messages" role="tab" data-toggle="tab">地理位置</a></li>
-                    <li role="presentation"><a href="#product_tab_04" aria-controls="settings" role="tab" data-toggle="tab">身份验证</a></li>
+                    <li role="presentation" class="active"><a href="#product_tab_01" aria-controls="home" role="tab"
+                            data-toggle="tab">特别推荐</a></li>
+                    <li role="presentation"><a href="#product_tab_02" aria-controls="profile" role="tab"
+                            data-toggle="tab">视频宣传</a></li>
+                    <li role="presentation"><a href="#product_tab_03" aria-controls="messages" role="tab"
+                            data-toggle="tab">地理位置</a></li>
+                    <li role="presentation"><a href="#product_tab_04" aria-controls="settings" role="tab"
+                            data-toggle="tab">身份验证</a></li>
                 </ul>
             </div>
             <!-- Tab panes -->
@@ -216,37 +224,55 @@
                     <div class="produce-pane">
                         <div class="product-pane-flex"></div>
 
-                        <div class="product_box" onmouseenter="produce_img_over(this)" onmouseleave="produce_img_out(this)">
-                            <img class="product_img_small" src="images/produce_box/produce_img_1.jpg" width="100%" height="100%">
-                            <img class="product_img_width" src="images/produce_box/produce_img_1_wd.jpg" width="100%" height="100%">
+                        <div class="product_box" onmouseenter="produce_img_over(this)"
+                            onmouseleave="produce_img_out(this)">
+                            <img class="product_img_small" src="images/produce_box/produce_img_1.jpg" width="100%"
+                                height="100%">
+                            <img class="product_img_width" src="images/produce_box/produce_img_1_wd.jpg" width="100%"
+                                height="100%">
                         </div>
 
-                        <div class="product_box" onmouseenter="produce_img_over(this)" onmouseleave="produce_img_out(this)">
-                            <img class="product_img_small" src="images/produce_box/produce_img_2.jpg" width="100%" height="100%">
-                            <img class="product_img_width" src="images/produce_box/produce_img_2_wd.jpg" width="100%" height="100%">
-
-                        </div>
-
-                        <div class="product_box" onmouseenter="produce_img_over(this)" onmouseleave="produce_img_out(this)">
-                            <img class="product_img_small" src="images/produce_box/produce_img_3.jfif" width="100%" height="100%">
-                            <img class="product_img_width" src="images/produce_box/produce_img_3_wd.jfif" width="100%" height="100%">
-
-                        </div>
-
-                        <div class="product_box" onmouseenter="produce_img_over(this)" onmouseleave="produce_img_out(this)">
-                            <img class="product_img_small" src="images/produce_box/produce_img_4.jfif" width="100%" height="100%">
-                            <img class="product_img_width" src="images/produce_box/produce_img_4_wd.jfif" width="100%" height="100%">
+                        <div class="product_box" onmouseenter="produce_img_over(this)"
+                            onmouseleave="produce_img_out(this)">
+                            <img class="product_img_small" src="images/produce_box/produce_img_2.jpg" width="100%"
+                                height="100%">
+                            <img class="product_img_width" src="images/produce_box/produce_img_2_wd.jpg" width="100%"
+                                height="100%">
 
                         </div>
 
-                        <div class="product_box" onmouseenter="produce_img_over(this)" onmouseleave="produce_img_out(this)">
-                            <img class="product_img_small" src="images/produce_box/produce_img_5.jfif" width="100%" height="100%">
-                            <img class="product_img_width" src="images/produce_box/produce_img_5_wd.jfif" width="100%" height="100%">
+                        <div class="product_box" onmouseenter="produce_img_over(this)"
+                            onmouseleave="produce_img_out(this)">
+                            <img class="product_img_small" src="images/produce_box/produce_img_3.jfif" width="100%"
+                                height="100%">
+                            <img class="product_img_width" src="images/produce_box/produce_img_3_wd.jfif" width="100%"
+                                height="100%">
 
                         </div>
-                        <div class="product_box" onmouseenter="produce_img_over(this)" onmouseleave="produce_img_out(this)">
-                            <img class="product_img_small" src="images/produce_box/produce_img_6.jfif" width="100%" height="100%">
-                            <img class="product_img_width" src="images/produce_box/produce_img_6_wd.jfif" width="100%" height="100%">
+
+                        <div class="product_box" onmouseenter="produce_img_over(this)"
+                            onmouseleave="produce_img_out(this)">
+                            <img class="product_img_small" src="images/produce_box/produce_img_4.jfif" width="100%"
+                                height="100%">
+                            <img class="product_img_width" src="images/produce_box/produce_img_4_wd.jfif" width="100%"
+                                height="100%">
+
+                        </div>
+
+                        <div class="product_box" onmouseenter="produce_img_over(this)"
+                            onmouseleave="produce_img_out(this)">
+                            <img class="product_img_small" src="images/produce_box/produce_img_5.jfif" width="100%"
+                                height="100%">
+                            <img class="product_img_width" src="images/produce_box/produce_img_5_wd.jfif" width="100%"
+                                height="100%">
+
+                        </div>
+                        <div class="product_box" onmouseenter="produce_img_over(this)"
+                            onmouseleave="produce_img_out(this)">
+                            <img class="product_img_small" src="images/produce_box/produce_img_6.jfif" width="100%"
+                                height="100%">
+                            <img class="product_img_width" src="images/produce_box/produce_img_6_wd.jfif" width="100%"
+                                height="100%">
 
                         </div>
 
@@ -255,10 +281,54 @@
 
                 </div>
                 <div role="tabpanel" class="tab-pane" id="product_tab_02">
-
+                    <div role="tabpanel" class="tab-pane" id="product_tab_02">
+                        <video id="myVideo" src="images/movie.mp4" width="100%" height="100%">您的浏览器不支持video标签</video>
+                        <br /><br />
+                        <input type="button" value="播放/暂停" onclick="playPause()" />
+                        <input type="button" value="打开/关闭 音乐" onclick="playClose()" />
+                    </div>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="product_tab_03" style="width: 100%;height: 100%; overflow: hidden;">
+                <div role="tabpanel" class="tab-pane" id="product_tab_03"
+                    style="width: 100%;height: 100%; overflow: hidden;">
+                    <div id="panorama" style="width: 80em;height: 50em;"></div>
+                    <div id="normal_map" style="width:80em;height: 50em;"></div>
+                    <script type="text/javascript">
+                        //全景图展示
+                        var panorama = new BMap.Panorama('panorama');
+                        panorama.setPosition(new BMap.Point(121.63626, 29.833744)); //根据经纬度坐标展示全景图
+                        panorama.setPov({
+                            heading: -40,
+                            pitch: 6
+                        });
 
+                        panorama.addEventListener('position_changed', function (e) {
+                            var pos = panorama.getPosition();
+                            map.setCenter(new BMap.Point(pos.lng, pos.lat));
+                            marker.setPosition(pos);
+                        });
+                        //地图展示
+                        var mapOption = {
+                            mapType: BMAP_NORMAL_MAP,
+                            maxZoom: 18,
+                            drawMargin: 0,
+                            enableFulltimeSpotClick: true,
+                            enableHighResolution: true
+                        }
+                        var map = new BMap.Map("normal_map", mapOption);
+                        var testpoint = new BMap.Point(121.63626, 29.833744);
+                        map.centerAndZoom(testpoint, 18);
+                        var marker = new BMap.Marker(testpoint);
+                        marker.enableDragging();
+                        map.addOverlay(marker);
+                        marker.addEventListener('dragend', function (e) {
+                            //拖动marker后，全景图位置也随着改变
+                            panorama.setPosition(e.point);
+                            panorama.setPov({
+                                heading: -40,
+                                pitch: 6
+                            });
+                        });
+                    </script>
                 </div>
 
 
@@ -281,9 +351,10 @@
                     <div class="news_line hidden-sm hidden-xs"></div>
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs-news" role="tablist">
-                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><span class="heima_icon heima_icon_new01"></span></a></li>
-                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><span
-                  class="heima_icon heima_icon_new02"></span></a></li>
+                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+                                data-toggle="tab"><span class="heima_icon heima_icon_new01"></span></a></li>
+                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
+                                data-toggle="tab"><span class="heima_icon heima_icon_new02"></span></a></li>
 
                     </ul>
                 </div>
@@ -408,6 +479,8 @@
     <script src="js/localStorage.js"></script>
 
     <script src="js/produce_box.js"></script>
+
+    <script src="js/video.js"></script>
 </body>
 
 </html>

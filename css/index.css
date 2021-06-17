@@ -892,3 +892,14 @@ fieldset[disabled] .heima_nav .btn-link:focus {
 .heima_icon_partner09::before {
     content: "\e92d";
 }
+
+/* 身份验证 */
+.dropzone{
+    width: 30em;
+    height: 15em;
+    border: 2px  dashed #ddd;
+    text-align: center;
+    padding-top: 100px;
+    color: #999;
+    display: inline-block;
+}
