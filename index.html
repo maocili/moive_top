@@ -19,8 +19,13 @@
     <script src="lib/respond/respond.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/drag.css" />
+
+    <!--bootstrap是依赖jquery的-->
+    <script src="lib/jquery/jquery.min.js"></script>
 
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=4qXTGvclMqTZXkLsU3twnMA7"></script>
+    <script src="js/drag.js"></script>
 
 
 
@@ -191,14 +196,18 @@
     <div class="heima_book">
         <div class="container">
             <div class="pull-left">
-                <span class="heima_icon heima_icon_E906"></span> 预约描述 <a class="book_link" href="#">TODO: 滑块验证</a>
+                <span class="heima_icon heima_icon_E906"></span> 预约描述 <a class="book_link" onclick="drag_control()">立即预约</a>
             </div>
-            <!-- <div class="pull-right hidden-xs">
-                <a href="#">
-                    <span class="heima_icon heima_icon_E905"></span>
-                    黑马程序员企业宣传片
-                </a>
-            </div> -->
+            <div class="drag_box">
+                <center><br><br><br>
+                    <div id="drag"></div>
+                </center>
+
+                <script type="text/javascript">
+                    $('#drag').drag();
+                </script>
+            </div>
+
         </div>
     </div>
     <!--产品模块-->
@@ -544,8 +553,8 @@
             <%});%>
     </script>
 
-    <!--bootstrap是依赖jquery的-->
-    <script src="lib/jquery/jquery.min.js"></script>
+
+
     <!--bootstrap的核心js文件-->
     <script src="lib/bootstrap/js/bootstrap.js"></script>
     <!--underscore-->
@@ -559,6 +568,9 @@
     <script src="js/produce_box.js"></script>
 
     <script src="js/video.js"></script>
+
+
+
 </body>
 
 </html>
