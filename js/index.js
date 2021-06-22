@@ -24,19 +24,6 @@ function banner() {
             return false;
         }
 
-        /*获取数据 */
-        // $.ajax({
-        //     url:'js/index.json',/*相对页面的请求路径*/
-        //     type:'get',
-        //     data:{},
-        //     dataType:'json',
-        //     success:function(data){
-        //         /*当我们做一次请求的时候需要记录*/
-        //         myData = data;
-        //         callback && callback(myData);
-        //     }
-        // });
-
         data = [{
                 "pc": "images/slide_01_2000x410.jpg",
                 "mb": "images/slide_01_640x340.jpg"
@@ -126,32 +113,6 @@ function banner() {
         isMove = false;
     });
 }
-/*初始化产品页签*/
-function initProduct() {
-    /*
-     * 知道所有li的宽度的和
-     * ul的宽度设置成和所有li的和相一致
-     * 滑动
-     * */
-    /*获取页签盒子*/
-    var tabs = $('.nav-tabs-product');
-    /*所有的li*/
-    var lis = tabs.find('li');
-    var width = 0;
-    $.each(lis, function(i, item) {
-        /*width() 获取的是内容的宽度*/
-        /*innerWidth() 获取的是 内容 内边距 的宽度*/
-        width += $(this).innerWidth();
-    });
-    tabs.width(width);
-}
-/*滑动*/
-itcast.iScroll({
-    swipeDom: document.querySelector('.nav-tabs-product-parent'),
-    swipeType: 'x',
-    swipeDistance: 1000
-});
-
 /*初始化产品页签*/
 function initProduct() {
     /*

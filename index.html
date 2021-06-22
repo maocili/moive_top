@@ -108,7 +108,7 @@
     </div>
 
     <!--信息模块-->
-    <!-- :TODO 手机端隐藏 -->
+    <!--手机端隐藏 -->
     <div class="heima_info hidden-xs">
         <div class="container">
             <div class="row">
@@ -225,8 +225,8 @@
             </div>
             <!-- Tab panes -->
             <div class="tab-content">
+                <!-- 特别推荐 -->
                 <div role="tabpanel" class="tab-pane active" id="product_tab_01">
-
                     <div class="produce-pane">
                         <div class="product-pane-flex"></div>
 
@@ -351,11 +351,8 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
                 </div>
+                <!-- 视频宣传 -->
                 <div role="tabpanel" class="tab-pane" id="product_tab_02">
                     <div role="tabpanel" class="tab-pane" id="product_tab_02">
                         <video id="myVideo" src="images/movie.mp4" width="100%" height="100%">您的浏览器不支持video标签</video>
@@ -364,6 +361,7 @@
                         <input type="button" value="打开/关闭 音乐" onclick="playClose()" />
                     </div>
                 </div>
+                <!-- 地理位置 -->
                 <div role="tabpanel" class="tab-pane" id="product_tab_03" style="width: 100%;height: 100%; overflow: hidden;">
                     <div id="panorama" style="width: 80em;height: 50em;"></div>
                     <div id="normal_map" style="width:80em;height: 50em;"></div>
@@ -405,8 +403,7 @@
                         });
                     </script>
                 </div>
-
-
+                <!-- 身份验证 -->
                 <div role="tabpanel" class="tab-pane" id="product_tab_04">
                     <div id="dropzone" class="dropzone">拖拽文件到此处</div>
                     <div id="preview" class="preview"></div>
@@ -425,7 +422,17 @@
                             info += "; 大小:" + sizeinfo;
                             info += "; 类型:" + file.type;
 
-                            return info + '<br>';
+
+                            if (file.type != "image/jpeg" && file.type != "image/png") {
+                                alert("上传图片类型错误,请重新长传");
+                            } else {
+                                alert("验证成功")
+                                return info
+
+                            }
+
+                            return null
+
                         }
 
                         function handleFiles(files) {
@@ -457,10 +464,11 @@
                         }
 
 
+
                         var dropzone = document.getElementById('dropzone')
                         dropzone.addEventListener('drop', function(e) {
 
-                            console.log(1);
+
                             var html = '您一共选择了 ' + e.dataTransfer.files.length + '个文件,文件信息如下:<br>';
 
                             [].forEach.call(e.dataTransfer.files, function(file) {
@@ -474,8 +482,6 @@
 
                             e.preventDefault();
                             e.stopPropagation();
-
-
 
                         }, false);
 
@@ -622,6 +628,8 @@
     <script src="lib/bootstrap/js/bootstrap.js"></script>
     <!--underscore-->
     <script src="lib/underscore/underscore-min.js"></script>
+    <script src="js/swipe.js"></script>
+
     <!--自己的js-->
     <script src="js/swipe.js"></script>
     <script src="js/index.js"></script>
@@ -631,6 +639,7 @@
     <script src="js/produce_box.js"></script>
 
     <script src="js/video.js"></script>
+
 
 
 
